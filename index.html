@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FA Personalizados | Canecas e presentes personalizados</title>
+<meta name="description" content="Canecas personalizadas e brindes para presentear, para a sua empresa e para a sua festa. Escolha uma arte pronta ou mande a sua ideia e peça pelo WhatsApp.">
+<meta name="theme-color" content="#0D0D0D">
+<link rel="canonical" href="https://fapersonalizados.art.br/">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="FA Personalizados">
+<meta property="og:title" content="FA Personalizados | Fazendo Arte">
+<meta property="og:description" content="Canecas personalizadas e brindes para presentear, para a sua empresa e para a sua festa. Escolha uma arte pronta ou mande a sua ideia e peça pelo WhatsApp.">
+<meta property="og:url" content="https://fapersonalizados.art.br/">
+<meta property="og:image" content="https://fapersonalizados.art.br/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Canecas personalizadas da FA Personalizados">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700;1,800;1,900&family=Kaushan+Script&display=swap">
+<style>
+/* Layout: faixas pretas de ponta a ponta, uma faixa clara para o catálogo de artes; tudo inclinado no mesmo ângulo das linhas de velocidade do logo */
+:root {
+  color-scheme: dark;
+  --ink: #0D0D0D;
+  --ink-2: #161616;
+  --ink-3: #242424;
+  --line: #333333;
+  --paper: #FFFFFF;
+  --paper-2: #D4D4D4;
+  --paper-3: #A3A3A3;
+  --red: #E3141B;
+  --red-deep: #A50E13;
+  --zap: #0E8A5F;
+  --zap-deep: #0B6E4C;
+  --sand: #F2EFEA;
+  --sand-2: #E6E2DC;
+  --sand-ink: #0D0D0D;
+  --sand-muted: #4A4A4A;
+  --font: 'Kanit', 'Arial Narrow', Arial, sans-serif;
+  --script: 'Kaushan Script', 'Brush Script MT', cursive;
+  --skew: -12deg;
+  --unskew: 12deg;
+  --fs-xs: 13px;
+  --fs-sm: 15px;
+  --fs-base: 17px;
+  --fs-md: 20px;
+  --fs-lg: clamp(24px, 3.4vw, 30px);
+  --fs-xl: clamp(36px, 6vw, 60px);
+  --fs-hero: clamp(46px, 8.6vw, 96px);
+}
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font);
+  font-size: var(--fs-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 10;
+  background: var(--ink);
+}
+a { color: inherit; }
+[hidden] { display: none !important; }
+h1, h2, h3 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+:focus-visible { outline: 3px solid var(--paper); outline-offset: 3px; }
+
+.wrap {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+section { scroll-margin-top: 120px; }
+
+/* Marca */
+.fa-mark { display: block; overflow: visible; }
+
+/* Tarja inclinada */
+.tag {
+  display: inline-block;
+  align-self: flex-start;
+  margin-left: 6px;
+  padding: 3px 14px;
+  background: var(--red);
+  color: var(--paper);
+  transform: skewX(var(--skew));
+  font-weight: 800;
+  font-style: italic;
+  font-size: var(--fs-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.tag > span { display: inline-block; transform: skewX(var(--unskew)); }
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 26px;
+  transform: skewX(var(--skew));
+  font-weight: 800;
+  font-style: italic;
+  font-size: var(--fs-base);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+  cursor: pointer;
+}
+.btn > span { display: inline-flex; align-items: center; gap: 10px; transform: skewX(var(--unskew)); }
+.btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.btn-red { background: var(--red); color: var(--paper); }
+.btn-red:hover { background: var(--red-deep); }
+.btn-ghost { border-color: var(--paper); color: var(--paper); background: transparent; }
+.btn-ghost:hover { background: var(--paper); color: var(--ink); }
+.btn-dark { background: var(--ink); color: var(--paper); }
+.btn-dark:hover { background: var(--ink-3); }
+.btn-sm { min-height: 44px; padding: 0 18px; font-size: var(--fs-sm); }
+
+/* Linhas de velocidade */
+.vel { display: inline-flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.vel i { display: block; height: 8px; background: var(--red); transform: skewX(var(--skew)); }
+.vel i:nth-child(1) { width: 56px; }
+.vel i:nth-child(2) { width: 40px; margin-right: 3px; }
+.vel i:nth-child(3) { width: 24px; margin-right: 6px; }
+
+/* Topo */
+.topo {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 20;
+  background: var(--ink);
+  background: color-mix(in srgb, var(--ink) 92%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.topo-in {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-block: 12px;
+  flex-wrap: wrap;
+}
+.marca { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.marca-txt { font-weight: 800; font-style: italic; font-size: 15px; letter-spacing: 0.14em; }
+.menu { display: flex; gap: 22px; margin-left: auto; }
+.menu a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  color: var(--paper-2);
+  padding-block: 10px;
+  white-space: nowrap;
+}
+.menu a:hover { color: var(--paper); }
+.topo .btn { margin-left: 4px; }
+
+/* Hero */
+.hero { padding-block: clamp(40px, 7vw, 88px) clamp(36px, 6vw, 72px); overflow: hidden; }
+.hero-in { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 40px; align-items: center; }
+.hero-txt { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.hero h1 {
+  font-weight: 900;
+  font-style: italic;
+  font-size: var(--fs-hero);
+  line-height: 0.92;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.hero h1 em { font-style: italic; color: var(--red); display: block; }
+.lead { font-size: var(--fs-md); color: var(--paper-2); max-width: 34ch; line-height: 1.5; }
+.acoes { display: flex; flex-wrap: wrap; gap: 14px 18px; padding-left: 8px; }
+.hero-arte { min-width: 0; position: relative; padding-block: 24px; }
+.hero-arte::before {
+  content: "";
+  position: absolute;
+  inset: 0 6% 0 22%;
+  background: var(--red);
+  transform: skewX(var(--skew));
+}
+.hero-arte img { position: relative; display: block; width: 100%; max-width: 100%; height: auto; }
+
+/* Faixa de produtos */
+.faixa {
+  background: var(--red);
+  overflow: hidden;
+  transform: skewY(-1.5deg);
+  margin-block: 6px;
+}
+.faixa-trilho {
+  display: flex;
+  width: max-content;
+  animation: rolar 32s linear infinite;
+}
+.faixa-trilho span {
+  display: block;
+  padding-block: 12px;
+  padding-right: 28px;
+  font-weight: 900;
+  font-style: italic;
+  font-size: clamp(18px, 2.4vw, 24px);
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+@keyframes rolar { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .faixa-trilho { animation: none; } }
+
+/* Seções */
+.secao { padding-block: clamp(56px, 8vw, 104px); }
+.titulo { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; }
+.titulo h2 {
+  font-weight: 900;
+  font-style: italic;
+  font-size: var(--fs-xl);
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+.titulo p { color: var(--paper-2); max-width: 56ch; font-size: var(--fs-base); }
+
+/* O que fazemos */
+.frentes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.frente {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 28px 24px 26px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  min-width: 0;
+}
+.frente-icone { width: 72px; height: 72px; display: grid; place-items: center; border: 4px solid var(--red); border-radius: 50%; }
+.frente-icone svg { width: 36px; height: 36px; }
+.frente h3 { font-weight: 800; font-style: italic; font-size: var(--fs-lg); line-height: 1.1; text-transform: uppercase; }
+.frente p { color: var(--paper-2); font-size: var(--fs-sm); flex-grow: 1; }
+.frente .btn { align-self: flex-start; margin-left: 6px; }
+.nota-escura { margin-top: 28px; color: var(--paper-2); }
+.nota-escura a { color: var(--paper); font-weight: 700; }
+
+/* Artes prontas (faixa clara) */
+.clara { background: var(--sand); color: var(--sand-ink); }
+.clara .titulo p { color: var(--sand-muted); }
+.clara :focus-visible { outline-color: var(--sand-ink); }
+.filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; padding-left: 6px; }
+.chip {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 2px solid var(--sand-ink);
+  background: transparent;
+  color: var(--sand-ink);
+  font-family: var(--font);
+  font-weight: 700;
+  font-style: italic;
+  font-size: var(--fs-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transform: skewX(var(--skew));
+  cursor: pointer;
+}
+.chip > span { display: inline-block; transform: skewX(var(--unskew)); }
+.chip[aria-pressed="true"] { background: var(--sand-ink); color: var(--sand); }
+.chip:focus-visible { outline-color: var(--red); }
+.artes { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.arte { display: flex; flex-direction: column; background: var(--paper); border: 1px solid var(--sand-2); min-width: 0; }
+.arte-img { position: relative; background: var(--sand-2); padding: 8px 8px 48px; }
+.arte-img img { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 1400 / 620; object-fit: contain; }
+.ver {
+  position: absolute; right: 10px; bottom: 8px;
+  min-height: 34px; padding: 0 12px;
+  border: 0; background: var(--sand-ink); color: var(--sand);
+  font-family: var(--font); font-weight: 600; font-size: var(--fs-xs); letter-spacing: 0.04em;
+  cursor: pointer;
+}
+.ver:hover { background: var(--red-deep); }
+.arte-info { display: flex; flex-direction: column; gap: 12px; padding: 16px 16px 18px; flex-grow: 1; }
+.arte-info > div { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex-grow: 1; }
+.arte-cod { font-weight: 700; font-size: var(--fs-xs); letter-spacing: 0.14em; color: var(--sand-muted); font-variant-numeric: tabular-nums; }
+.arte h3 { font-weight: 800; font-style: italic; font-size: var(--fs-md); line-height: 1.15; color: var(--sand-ink); }
+.arte .btn { align-self: flex-start; margin-left: 6px; }
+.nota { margin-top: 32px; font-size: var(--fs-base); color: var(--sand-muted); }
+.nota a { color: var(--red-deep); font-weight: 700; }
+
+/* Como pedir */
+.passos { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.passo { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.passo > div:last-child { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.passo-num {
+  width: 76px; height: 76px;
+  margin-left: 8px;
+  display: grid; place-items: center;
+  background: var(--red);
+  transform: skewX(var(--skew));
+  font-weight: 900; font-style: italic; font-size: 44px; line-height: 1;
+}
+.passo-num span { transform: skewX(var(--unskew)); }
+.passo h3 { font-weight: 800; font-style: italic; font-size: var(--fs-lg); text-transform: uppercase; line-height: 1.1; }
+.passo p { color: var(--paper-2); max-width: 32ch; }
+
+/* Dúvidas */
+.duvidas { max-width: 780px; display: flex; flex-direction: column; border-top: 1px solid var(--line); }
+.duvidas details { border-bottom: 1px solid var(--line); }
+.duvidas summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding-block: 20px;
+  font-weight: 700; font-size: var(--fs-md);
+}
+.duvidas summary::-webkit-details-marker { display: none; }
+.duvidas summary::after {
+  content: "";
+  width: 18px; height: 6px;
+  background: var(--red);
+  transform: skewX(var(--skew));
+  flex-shrink: 0;
+  transition: transform .2s ease;
+}
+.duvidas details[open] summary::after { transform: skewX(var(--skew)) rotate(90deg); }
+.duvidas details p { padding-bottom: 22px; color: var(--paper-2); max-width: 62ch; }
+
+/* Chamada final */
+.chamada { background: var(--red); padding-block: clamp(48px, 7vw, 80px); }
+.chamada-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 28px; }
+.chamada h2 { font-weight: 900; font-style: italic; font-size: var(--fs-xl); line-height: 0.95; text-transform: uppercase; }
+.chamada-acoes { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; }
+.fone { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-weight: 700; font-size: var(--fs-md); }
+.fone-num { user-select: all; font-variant-numeric: tabular-nums; }
+.copiar {
+  min-height: 40px; padding: 0 14px;
+  background: transparent; color: var(--paper);
+  border: 2px solid var(--paper);
+  font-family: var(--font); font-weight: 700; font-size: var(--fs-xs);
+  letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+}
+.copiar:hover { background: var(--paper); color: var(--red); }
+
+/* Rodapé */
+.rodape { padding-block: 44px 96px; border-top: 1px solid var(--line); }
+.rodape-in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.rodape-marca { display: flex; flex-direction: column; gap: 10px; }
+.rodape-links { display: flex; flex-direction: column; gap: 6px; color: var(--paper-2); font-size: var(--fs-sm); }
+.rodape-links a { text-decoration: none; }
+.rodape-links a:hover { color: var(--paper); text-decoration: underline; }
+.rodape small { display: block; color: var(--paper-3); font-size: var(--fs-xs); margin-top: 6px; }
+
+/* Botão flutuante do WhatsApp */
+.flutuante {
+  position: fixed;
+  right: calc(16px + env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 22px 0 18px;
+  border-radius: 28px;
+  background: var(--zap);
+  color: var(--paper);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--paper);
+  transition: background-color .15s ease;
+}
+.flutuante:hover { background: var(--zap-deep); }
+.flutuante svg { width: 26px; height: 26px; flex-shrink: 0; }
+
+@media (max-width: 900px) {
+  .frentes { grid-template-columns: minmax(0, 1fr); }
+  .passos { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .passo { flex-direction: row; align-items: flex-start; gap: 22px; }
+  .passo > div { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .passo-num { width: 64px; height: 64px; font-size: 36px; flex-shrink: 0; }
+}
+@media (max-width: 820px) {
+  .menu { order: 3; width: 100%; margin-left: 0; overflow-x: auto; gap: 20px; padding-bottom: 2px; scrollbar-width: none; }
+  .menu::-webkit-scrollbar { display: none; }
+  .topo .btn { margin-left: auto; }
+  .hero-in { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+}
+@media (max-width: 520px) {
+  .marca-txt { display: none; }
+  .artes { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .arte-info { flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 12px 14px 14px; }
+  .arte-info > div { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .arte h3 { font-size: var(--fs-base); }
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="g-sombra" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity="0.22"/>
+      <stop offset="0.22" stop-color="#000" stop-opacity="0"/>
+      <stop offset="0.72" stop-color="#000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0.26"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="topo">
+  <div class="wrap topo-in">
+    <a class="marca" href="#inicio" aria-label="FA Personalizados, voltar ao início">
+      <svg class="fa-mark" viewBox="14 14 198 82" width="86" height="36" aria-hidden="true">
+        <g fill="#E3141B"><path d="M20.5 37H66.5L65 43H19Z"/><path d="M28.5 50H62.5L61 56H27Z"/><path d="M37.5 63H59.5L58 69H36Z"/></g>
+        <text x="58" y="90" font-family="Kanit, sans-serif" font-style="italic" font-weight="900" font-size="100" letter-spacing="-3"><tspan fill="#FFFFFF">F</tspan><tspan fill="#E3141B">A</tspan></text>
+        <rect x="63" y="55" width="160" height="3.4" fill="#0D0D0D"/><rect x="63" y="70.5" width="160" height="1.8" fill="#0D0D0D"/>
+      </svg>
+      <span class="marca-txt">PERSONALIZADOS</span>
+    </a>
+    <nav class="menu" aria-label="Seções do site">
+      <a href="#o-que-fazemos">O que fazemos</a>
+      <a href="#artes">Artes prontas</a>
+      <a href="#como-pedir">Como pedir</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-red btn-sm" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+      WhatsApp</span></a>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-txt">
+        <span class="tag"><span>Fazendo arte</span></span>
+        <h1>Sua foto, sua frase, <em>sua marca.</em></h1>
+        <p class="lead">Personalizados para presentear, para a sua empresa e para a sua festa. Você manda a ideia pelo WhatsApp, aprova a arte e a gente produz.</p>
+        <div class="acoes">
+          <a class="btn btn-red" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            Pedir no WhatsApp</span></a>
+          <a class="btn btn-ghost" href="#artes"><span>Ver artes prontas</span></a>
+        </div>
+      </div>
+      <div class="hero-arte">
+        <img src="mockups/n02.webp" alt="Duas canecas brancas com a arte de Natal do pinguim, uma de cada lado" width="1400" height="620">
+      </div>
+    </div>
+  </section>
+
+  <div class="faixa" aria-hidden="true">
+    <div class="faixa-trilho">
+      <span>PRESENTES • BRINDES PARA EMPRESAS • FESTAS E EVENTOS • FAZENDO ARTE •</span>
+      <span>PRESENTES • BRINDES PARA EMPRESAS • FESTAS E EVENTOS • FAZENDO ARTE •</span>
+    </div>
+  </div>
+
+  <section id="o-que-fazemos" class="secao">
+    <div class="wrap">
+      <div class="titulo">
+        <span class="tag"><span>O que a gente faz</span></span>
+        <h2>Personalizado para cada ocasião</h2>
+        <p>Você conta a ideia e a gente cuida da arte e da produção.</p>
+      </div>
+      <div class="frentes">
+        <article class="frente">
+          <div class="frente-icone"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg></div>
+          <h3>Para presentear</h3>
+          <p>Canecas e outros presentes com foto, nome ou frase. Para aniversário, datas especiais ou só para fazer alguém sorrir.</p>
+          <a class="btn btn-red btn-sm" data-wa="Olá! Quero um presente personalizado." href="https://wa.me/" target="_blank" rel="noopener"><span>Quero presentear</span></a>
+        </article>
+        <article class="frente">
+          <div class="frente-icone"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+          <h3>Para sua empresa</h3>
+          <p>Brindes com a sua marca para clientes, equipe e eventos. Mande o logo e a quantidade que a gente faz o orçamento.</p>
+          <a class="btn btn-red btn-sm" data-wa="Olá! Quero um orçamento de brindes para a minha empresa." href="https://wa.me/" target="_blank" rel="noopener"><span>Pedir orçamento</span></a>
+        </article>
+        <article class="frente">
+          <div class="frente-icone"><svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 22h8"/><path d="M7 10h10"/><path d="M12 15v7"/><path d="M12 15a5 5 0 0 0 5-5c0-2-.5-4-2-8H9c-1.5 4-2 6-2 8a5 5 0 0 0 5 5Z"/></svg></div>
+          <h3>Para sua festa</h3>
+          <p>Taças acrílicas e lembrancinhas personalizadas para aniversário, casamento, chá de bebê e formatura.</p>
+          <a class="btn btn-red btn-sm" data-wa="Olá! Quero personalizados para uma festa." href="https://wa.me/" target="_blank" rel="noopener"><span>Montar minha festa</span></a>
+        </article>
+      </div>
+      <p class="nota-escura">Tem outra ideia? <a data-wa="Olá! Tenho uma ideia de personalizado e queria saber se vocês fazem." href="https://wa.me/" target="_blank" rel="noopener">Chama no WhatsApp</a> que a gente vê o que dá para fazer.</p>
+    </div>
+  </section>
+
+  <section id="artes" class="secao clara">
+    <div class="wrap">
+      <div class="titulo">
+        <span class="tag"><span>Catálogo</span></span>
+        <h2>Artes prontas para caneca</h2>
+        <p>A imagem mostra a estampa inteira, que dá a volta na caneca. Peça do jeito que está ou use como ideia: dá para colocar nome, trocar a frase ou a cor. Cada arte tem um código para facilitar o pedido.</p>
+      </div>
+      <div class="filtros" role="group" aria-label="Filtrar artes por tema">
+        <button type="button" class="chip" id="f-todas" data-filtro="todas" aria-pressed="true"><span>Todas</span></button>
+        <button type="button" class="chip" id="f-natal" data-filtro="natal" aria-pressed="false"><span>Natal</span></button>
+        <button type="button" class="chip" id="f-desenhos" data-filtro="desenhos" aria-pressed="false"><span>Desenhos</span></button>
+        <button type="button" class="chip" id="f-frases" data-filtro="frases" aria-pressed="false"><span>Frases</span></button>
+        <button type="button" class="chip" id="f-profissoes" data-filtro="profissoes" aria-pressed="false"><span>Profissões</span></button>
+        <button type="button" class="chip" id="f-signos" data-filtro="signos" aria-pressed="false"><span>Signos</span></button>
+      </div>
+      <div id="grade-artes" class="artes" aria-live="polite"></div>
+      <p class="nota">Não achou o que queria? <a data-wa="Olá! Tenho uma ideia de arte e queria fazer um orçamento." href="https://wa.me/" target="_blank" rel="noopener">Manda sua ideia no WhatsApp</a> que a gente cria do zero.</p>
+    </div>
+  </section>
+
+  <section id="como-pedir" class="secao">
+    <div class="wrap">
+      <div class="titulo">
+        <span class="tag"><span>Simples assim</span></span>
+        <h2>Como pedir</h2>
+      </div>
+      <ol class="passos">
+        <li class="passo">
+          <div class="passo-num"><span>1</span></div>
+          <div>
+            <h3>Conte a ideia</h3>
+            <p>O que você quer, para qual ocasião e quantas peças. Se quiser, escolha uma arte pronta do catálogo.</p>
+          </div>
+        </li>
+        <li class="passo">
+          <div class="passo-num"><span>2</span></div>
+          <div>
+            <h3>Mande os detalhes</h3>
+            <p>Foto, frase, nome, logo da empresa ou o código da arte. A gente monta tudo pra você.</p>
+          </div>
+        </li>
+        <li class="passo">
+          <div class="passo-num"><span>3</span></div>
+          <div>
+            <h3>Aprove a arte</h3>
+            <p>Você vê como vai ficar antes de a gente produzir. Só depois sai a peça.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="duvidas" class="secao" style="border-top: 1px solid var(--line)">
+    <div class="wrap">
+      <div class="titulo">
+        <span class="tag"><span>Perguntas</span></span>
+        <h2>Dúvidas</h2>
+      </div>
+      <div class="duvidas">
+        <details>
+          <summary>Posso mandar minha própria foto?</summary>
+          <p>Pode. Mande pelo WhatsApp no maior tamanho que tiver. Foto nítida e bem iluminada fica melhor na estampa.</p>
+        </details>
+        <details>
+          <summary>Eu vejo a arte antes de ficar pronta?</summary>
+          <p>Sim. A gente monta a arte e te manda para aprovar. Só depois disso a peça é produzida.</p>
+        </details>
+        <details>
+          <summary>Quanto custa e qual o prazo?</summary>
+          <p>Depende do produto e da quantidade. Chame no WhatsApp que a gente te passa o valor e o prazo do seu pedido.</p>
+        </details>
+        <details>
+          <summary>Vocês fazem brindes para empresas?</summary>
+          <p>Fazemos. Mande o logo, o produto que você imagina e a quantidade, e a gente te passa o orçamento.</p>
+        </details>
+        <details>
+          <summary>Posso mudar uma arte pronta?</summary>
+          <p>Pode. Escolha a arte pelo código e diga o que quer trocar: nome, frase, cor ou foto.</p>
+        </details>
+        <details>
+          <summary>Como cuidar da caneca?</summary>
+          <p>Lave à mão com esponja macia. Evite a lava-louças e a esponja de aço, e não deixe de molho por muito tempo. Assim a estampa dura mais.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="chamada" aria-labelledby="chamada-titulo">
+    <div class="wrap chamada-in">
+      <h2 id="chamada-titulo">Tem uma ideia?<br>Chama a gente.</h2>
+      <div class="chamada-acoes">
+        <a class="btn btn-dark" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          Pedir no WhatsApp</span></a>
+        <div class="fone">
+          <span>WhatsApp:</span>
+          <span class="fone-num" id="fone-num">[SEU WHATSAPP]</span>
+          <button type="button" class="copiar" id="copiar-fone" hidden>Copiar número</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="wrap rodape-in">
+    <div class="rodape-marca">
+      <svg class="fa-mark" viewBox="14 14 198 82" width="120" height="50" aria-hidden="true">
+        <g fill="#E3141B"><path d="M20.5 37H66.5L65 43H19Z"/><path d="M28.5 50H62.5L61 56H27Z"/><path d="M37.5 63H59.5L58 69H36Z"/></g>
+        <text x="58" y="90" font-family="Kanit, sans-serif" font-style="italic" font-weight="900" font-size="100" letter-spacing="-3"><tspan fill="#FFFFFF">F</tspan><tspan fill="#E3141B">A</tspan></text>
+        <rect x="63" y="55" width="160" height="3.4" fill="#0D0D0D"/><rect x="63" y="70.5" width="160" height="1.8" fill="#0D0D0D"/>
+      </svg>
+      <span class="tag"><span>Fazendo arte</span></span>
+    </div>
+    <div class="rodape-links">
+      <span id="insta-linha">Instagram: [@INSTAGRAM]</span>
+      <span>fapersonalizados.art.br</span>
+      <small>© <span id="ano">2026</span> FA Personalizados</small>
+    </div>
+  </div>
+</footer>
+
+<a class="flutuante" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  <span>WhatsApp</span>
+</a>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO DA LOJA: troque aqui e o site todo atualiza
+   ========================================================= */
+const LOJA = {
+  // Só números, com 55 + DDD + número. Ex.: "5511999998888"
+  whatsapp: "5527996563536",
+  // Só o nome do perfil, sem @. Ex.: "fapersonalizados"
+  instagram: "fa.personalizados_",
+
+};
+
+/* Artes prontas: código, nome, tema e arquivo (pasta "artes") */
+const ARTES = [
+  { cod: "N01", nome: "Votos de um Feliz Natal", cat: "natal", img: "n01" },
+  { cod: "N02", nome: "Pinguim: Então é Natal", cat: "natal", img: "n02" },
+  { cod: "N03", nome: "Presentes menores, sentimentos maiores", cat: "natal", img: "n03" },
+  { cod: "N04", nome: "Paz, amor e alegria", cat: "natal", img: "n04" },
+  { cod: "N05", nome: "Papai Noel de férias (verde)", cat: "natal", img: "n05" },
+  { cod: "N06", nome: "Papai Noel de férias (azul)", cat: "natal", img: "n06" },
+  { cod: "N07", nome: "Gente que ama panetone", cat: "natal", img: "n07" },
+  { cod: "N08", nome: "Noel e a rena", cat: "natal", img: "n08" },
+  { cod: "N09", nome: "Rena de estrelas", cat: "natal", img: "n09" },
+  { cod: "N10", nome: "Árvore de Natal", cat: "natal", img: "n10" },
+  { cod: "N11", nome: "Papai Noel vermelho", cat: "natal", img: "n11" },
+  { cod: "N12", nome: "Natal com a sua foto", cat: "natal", img: "n13" },
+  { cod: "D01", nome: "Meow: gatinho na caixa", cat: "desenhos", img: "d01" },
+  { cod: "D02", nome: "Meow: gatinha branca", cat: "desenhos", img: "d02" },
+  { cod: "D03", nome: "Meow: gatinho no aquário", cat: "desenhos", img: "d03" },
+  { cod: "D04", nome: "Meow: gatinho cinza", cat: "desenhos", img: "d04" },
+  { cod: "D05", nome: "Cat Power", cat: "desenhos", img: "d05" },
+  { cod: "D06", nome: "Café & Gato", cat: "desenhos", img: "d06" },
+  { cod: "D07", nome: "Fofinha rosa", cat: "desenhos", img: "d07" },
+  { cod: "D08", nome: "Cachorro de óculos", cat: "desenhos", img: "d08" },
+  { cod: "D09", nome: "Cachorro e café", cat: "desenhos", img: "d09" },
+  { cod: "D10", nome: "Cachorro de chapéu", cat: "desenhos", img: "d10" },
+  { cod: "D11", nome: "Cachorro pirata", cat: "desenhos", img: "d11" },
+  { cod: "D12", nome: "Cachorro de boné", cat: "desenhos", img: "d12" },
+  { cod: "F01", nome: "Não estacione sua alma", cat: "frases", img: "f01" },
+  { cod: "F02", nome: "O que é seu chega com o tempo", cat: "frases", img: "f02" },
+  { cod: "F03", nome: "Você é forte", cat: "frases", img: "f03" },
+  { cod: "F04", nome: "Entrega o teu caminho ao Senhor", cat: "frases", img: "f04" },
+  { cod: "P01", nome: "Veterinária", cat: "profissoes", img: "p01" },
+  { cod: "P02", nome: "Psicologia", cat: "profissoes", img: "p02" },
+  { cod: "P03", nome: "Professor, obrigado por tudo", cat: "profissoes", img: "p03" },
+  { cod: "P04", nome: "Mamãe professora", cat: "profissoes", img: "p04" },
+  { cod: "P05", nome: "Dia dos Professores: corujas", cat: "profissoes", img: "p05" },
+  { cod: "P06", nome: "Dia dos Professores: quadro-negro", cat: "profissoes", img: "p06" },
+  { cod: "S01", nome: "Sou de Áries", cat: "signos", img: "s01" },
+  { cod: "S02", nome: "Sou de Libra", cat: "signos", img: "s02" },
+  { cod: "S03", nome: "Sou escorpiana", cat: "signos", img: "s03" },
+  { cod: "S04", nome: "Sou de Sagitário", cat: "signos", img: "s04" },
+  { cod: "S05", nome: "Ela é de Peixes", cat: "signos", img: "s05" },
+  { cod: "S06", nome: "Ela é de Escorpião", cat: "signos", img: "s06" }
+];
+
+/* ---------- WhatsApp ---------- */
+function soNumeros(v) { return String(v || "").replace(/\D/g, ""); }
+function linkWhats(msg) {
+  const num = soNumeros(LOJA.whatsapp);
+  const base = num ? "https://wa.me/" + num : "https://wa.me/";
+  return base + "?text=" + encodeURIComponent(msg);
+}
+function formatarFone(v) {
+  let d = soNumeros(v);
+  if (d.startsWith("55") && d.length > 11) d = d.slice(2);
+  if (d.length === 11) return "(" + d.slice(0, 2) + ") " + d.slice(2, 7) + "-" + d.slice(7);
+  if (d.length === 10) return "(" + d.slice(0, 2) + ") " + d.slice(2, 6) + "-" + d.slice(6);
+  return v;
+}
+function ligarBotoes(raiz) {
+  raiz.querySelectorAll("[data-wa]").forEach(function (a) { a.href = linkWhats(a.dataset.wa); });
+}
+
+/* ---------- Catálogo ---------- */
+/* Em "Todas", intercala os temas (um de cada) para mostrar a variedade logo no começo */
+function misturar(lista) {
+  const grupos = {}, ordem = [];
+  lista.forEach(function (d) {
+    if (!grupos[d.cat]) { grupos[d.cat] = []; ordem.push(d.cat); }
+    grupos[d.cat].push(d);
+  });
+  const saida = [];
+  for (let i = 0; saida.length < lista.length; i++) {
+    ordem.forEach(function (c) { if (grupos[c][i]) saida.push(grupos[c][i]); });
+  }
+  return saida;
+}
+
+function montarArtes() {
+  const grade = document.getElementById("grade-artes");
+  grade.innerHTML = misturar(ARTES).map(function (d) {
+    const msg = "Olá! Quero a arte " + d.cod + " (" + d.nome + ") na caneca.";
+    return '<article class="arte" data-cat="' + d.cat + '">' +
+      '<div class="arte-img"><img src="mockups/' + d.img + '.webp" data-mock="mockups/' + d.img + '.webp" data-flat="artes/' + d.img + '.jpg" alt="Canecas com a arte ' + d.nome + '" width="1400" height="620" loading="lazy">' +
+      '<button type="button" class="ver" aria-pressed="false">Ver estampa inteira</button></div>' +
+      '<div class="arte-info"><div><span class="arte-cod">ARTE ' + d.cod + '</span><h3>' + d.nome + '</h3></div>' +
+      '<a class="btn btn-red btn-sm" data-wa="' + msg.replace(/"/g, "&quot;") + '" href="https://wa.me/" target="_blank" rel="noopener"><span>Quero essa</span></a></div>' +
+      '</article>';
+  }).join("");
+  ligarBotoes(grade);
+  grade.addEventListener("click", function (ev) {
+    const b = ev.target.closest(".ver");
+    if (!b) return;
+    const img = b.parentElement.querySelector("img");
+    const plano = b.getAttribute("aria-pressed") !== "true";
+    img.src = plano ? img.dataset.flat : img.dataset.mock;
+    b.setAttribute("aria-pressed", String(plano));
+    b.textContent = plano ? "Ver na caneca" : "Ver estampa inteira";
+  });
+}
+function filtrar(cat) {
+  document.querySelectorAll(".chip").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.filtro === cat)); });
+  document.querySelectorAll(".arte").forEach(function (el) { el.hidden = !(cat === "todas" || el.dataset.cat === cat); });
+  try { localStorage.setItem("fa-filtro", cat); } catch (e) {}
+}
+
+/* ---------- Preços, contato e rodapé ---------- */
+function aplicarConfig() {
+  const num = soNumeros(LOJA.whatsapp);
+  const fone = document.getElementById("fone-num");
+  const botao = document.getElementById("copiar-fone");
+  if (num) {
+    fone.textContent = formatarFone(num);
+    botao.hidden = false;
+    botao.addEventListener("click", function () {
+      const texto = fone.textContent;
+      const avisar = function () { botao.textContent = "Copiado"; setTimeout(function () { botao.textContent = "Copiar número"; }, 1800); };
+      const selecionar = function () { const s = window.getSelection(); const r = document.createRange(); r.selectNodeContents(fone); s.removeAllRanges(); s.addRange(r); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(texto).then(avisar).catch(selecionar);
+      } else { selecionar(); }
+    });
+  }
+  const insta = soNumerosOuTexto(LOJA.instagram);
+  if (insta) {
+    const linha = document.getElementById("insta-linha");
+    linha.innerHTML = 'Instagram: <a href="https://instagram.com/' + encodeURIComponent(insta) + '" target="_blank" rel="noopener">@' + insta + '</a>';
+  }
+  document.getElementById("ano").textContent = String(new Date().getFullYear());
+}
+function soNumerosOuTexto(v) { return String(v || "").replace(/^@/, "").trim(); }
+
+/* ---------- Início ---------- */
+montarArtes();
+ligarBotoes(document);
+aplicarConfig();
+document.querySelectorAll(".chip").forEach(function (b) { b.addEventListener("click", function () { filtrar(b.dataset.filtro); }); });
+let filtroSalvo = "todas";
+try { filtroSalvo = localStorage.getItem("fa-filtro") || "todas"; } catch (e) {}
+filtrar(document.querySelector('.chip[data-filtro="' + filtroSalvo + '"]') ? filtroSalvo : "todas");
+</script>
+</body>
+</html>
