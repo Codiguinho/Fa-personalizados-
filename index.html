@@ -256,15 +256,6 @@ section { scroll-margin-top: 120px; }
 /* Artes prontas (faixa clara) */
 .clara { background: var(--sand); color: var(--sand-ink); }
 .clara .titulo p { color: var(--sand-muted); }
-
-/* Preço da caneca: uma linha compacta acima das artes */
-.preco { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; margin: -18px 0 26px; }
-.preco-tag { margin-left: 6px; padding: 6px 18px; background: var(--red); color: var(--paper); transform: skewX(var(--skew)); }
-.preco-tag > span { display: inline-flex; align-items: baseline; gap: 8px; transform: skewX(var(--unskew)); font-size: var(--fs-xs); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
-.preco-tag strong { font-size: 24px; font-weight: 900; font-style: italic; letter-spacing: 0; }
-.preco p { color: var(--sand-muted); font-size: var(--fs-sm); }
-.preco p b { color: var(--sand-ink); }
-.preco p a { color: var(--red-deep); font-weight: 700; }
 .clara :focus-visible { outline-color: var(--sand-ink); }
 .filtros { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; padding-left: 6px; }
 .chip {
@@ -513,10 +504,6 @@ section { scroll-margin-top: 120px; }
         <h2>Artes prontas para caneca</h2>
         <p>A imagem mostra a estampa inteira, que dá a volta na caneca. Peça do jeito que está ou use como ideia: dá para colocar nome, trocar a frase ou a cor. Cada arte tem um código para facilitar o pedido.</p>
       </div>
-      <div class="preco">
-        <div class="preco-tag"><span>A partir de <strong>R$ 35,90</strong></span></div>
-        <p>Qualquer arte ou a sua foto, mesmo preço. <b>De 10 canecas para cima o preço baixa:</b> <a data-wa="Olá! Quero saber o preço de atacado das canecas (10 ou mais unidades)." href="https://wa.me/" target="_blank" rel="noopener">pedir valor de atacado</a>.</p>
-      </div>
       <div class="filtros" role="group" aria-label="Filtrar artes por tema">
         <button type="button" class="chip" id="f-todas" data-filtro="todas" aria-pressed="true"><span>Todas</span></button>
         <button type="button" class="chip" id="f-natal" data-filtro="natal" aria-pressed="false"><span>Natal</span></button>
@@ -579,7 +566,7 @@ section { scroll-margin-top: 120px; }
         </details>
         <details>
           <summary>Quanto custa e qual o prazo?</summary>
-          <p>A caneca personalizada sai a partir de R$ 35,90, com qualquer arte do catálogo ou com a sua foto. A partir de 10 canecas o preço de cada uma baixa. Brindes, taças e outros produtos dependem do modelo e da quantidade. Chame no WhatsApp que a gente te passa o valor e o prazo do seu pedido.</p>
+          <p>Depende do produto e da quantidade. Chame no WhatsApp que a gente te passa o valor e o prazo do seu pedido.</p>
         </details>
         <details>
           <summary>Vocês fazem brindes para empresas?</summary>
