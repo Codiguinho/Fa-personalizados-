@@ -127,7 +127,7 @@ section { scroll-margin-top: 120px; }
   cursor: pointer;
 }
 .btn > span { display: inline-flex; align-items: center; gap: 10px; transform: skewX(var(--unskew)); }
-.btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.btn svg, .btn .wa-ico { width: 22px; height: 22px; flex-shrink: 0; }
 .btn-red { background: var(--red); color: var(--paper); }
 .btn-red:hover { background: var(--red-deep); }
 .btn-ghost { border-color: var(--paper); color: var(--paper); background: transparent; }
@@ -381,7 +381,7 @@ section { scroll-margin-top: 120px; }
   transition: background-color .15s ease;
 }
 .flutuante:hover { background: var(--zap-deep); }
-.flutuante svg { width: 26px; height: 26px; flex-shrink: 0; }
+.flutuante svg, .flutuante .wa-ico { width: 28px; height: 28px; flex-shrink: 0; }
 
 @media (max-width: 900px) {
   .frentes { grid-template-columns: minmax(0, 1fr); }
@@ -434,7 +434,7 @@ section { scroll-margin-top: 120px; }
       <a href="#duvidas">Dúvidas</a>
     </nav>
     <a class="btn btn-red btn-sm" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+      <img class="wa-ico" src="whatsapp.svg" alt="" width="22" height="22">
       WhatsApp</span></a>
   </div>
 </header>
@@ -448,7 +448,7 @@ section { scroll-margin-top: 120px; }
         <p class="lead">Personalizados para presentear, para a sua empresa e para a sua festa. Você manda a ideia pelo WhatsApp, aprova a arte e a gente produz.</p>
         <div class="acoes">
           <a class="btn btn-red" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            <img class="wa-ico" src="whatsapp.svg" alt="" width="22" height="22">
             Pedir no WhatsApp</span></a>
           <a class="btn btn-ghost" href="#artes"><span>Ver artes prontas</span></a>
         </div>
@@ -589,7 +589,7 @@ section { scroll-margin-top: 120px; }
       <h2 id="chamada-titulo">Tem uma ideia?<br>Chama a gente.</h2>
       <div class="chamada-acoes">
         <a class="btn btn-dark" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener"><span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+          <img class="wa-ico" src="whatsapp.svg" alt="" width="22" height="22">
           Pedir no WhatsApp</span></a>
         <div class="fone">
           <span>WhatsApp:</span>
@@ -620,7 +620,7 @@ section { scroll-margin-top: 120px; }
 </footer>
 
 <a class="flutuante" data-wa="Olá! Vim pelo site da FA Personalizados e quero fazer um pedido." href="https://wa.me/" target="_blank" rel="noopener" aria-label="Pedir no WhatsApp">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+  <img class="wa-ico" src="whatsapp.svg" alt="" width="22" height="22">
   <span>WhatsApp</span>
 </a>
 
